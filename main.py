@@ -20,15 +20,15 @@ init(autoreset=True)
 # =============================
 def banner():
     print(Fore.CYAN + Style.BRIGHT + r"""
-██╗  ██╗███████╗███████╗██████╗ ██████╗  ██████╗ ██████╗ ███████╗
-╚██╗██╔╝██╔════╝██╔════╝██╔══██╗██╔══██╗██╔═══██╗██╔══██╗██╔════╝
- ╚███╔╝ ███████╗███████╗██████╔╝██████╔╝██║   ██║██████╔╝█████╗  
- ██╔██╗ ╚════██║╚════██║██╔═══╝ ██╔══██╗██║   ██║██╔══██╗██╔══╝  
-██╔╝ ██╗███████║███████║██║     ██║  ██║╚██████╔╝██████╔╝███████╗
-╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝
+██╗  ██╗ ███████╗ ███████╗   ██████╗ ██╗   ██╗ ██╗     ███████╗ ███████╗
+╚██╗██╔╝ ██╔════╝ ██╔════╝   ██╔══██╗██║   ██║ ██║     ██╔════╝ ██╔════╝
+ ╚███╔╝  ███████╗ ███████╗   ██████╔╝██║   ██║ ██║     █████╗   ███████╗
+ ██╔██╗   ════██║ ╚════██║   ██╔═══╝ ██║   ██║ ██║     ██╔══╝   ╚════██║
+██╔╝ ██╗ ███████║ ███████║   ██║     ╚██████╔╝ ███████╗███████╗ ███████║
+╚═╝  ╚═╝  ══════╝ ╚══════╝   ╚═╝      ╚═════╝  ╚══════╝╚══════╝ ╚══════╝
 """)
-    print(Fore.YELLOW + "        Made by Vaibhav Gaikwad")
-    print(Fore.WHITE + "       An Advanced XSS Detection Tool")
+    print(Fore.YELLOW + Style.BRIGHT + "        Made by Vaibhav Gaikwad")
+    print(Fore.WHITE + "        An Advanced XSS Detection Tool")
     print(Fore.CYAN + "-" * 70 + "\n")
 
 
@@ -37,7 +37,7 @@ def banner():
 # =============================
 def check_katana():
     if not shutil.which("katana"):
-        print(Fore.RED + "[-] Katana not found!")
+        print(Fore.RED + "[-] Katana not found! Please install Katana first.")
         sys.exit(1)
 
 
@@ -133,14 +133,17 @@ def scan_xss(urls, mode):
                     skipped = True
                     break
 
-                sys.stdout.write(
-                    f"\r    Payloads: {payload_index}/{total_payloads}"
-                )
+                sys.stdout.write(f"\r    Payloads: {payload_index}/{total_payloads}")
                 sys.stdout.flush()
 
                 try:
                     test = inject_payload(url, param, payload)
-                    r = requests.get(test, timeout=8, verify=False)
+                    r = requests.get(
+                        test,
+                        timeout=8,
+                        verify=False,
+                        headers={"User-Agent": "XSSPulse"}
+                    )
 
                     if payload in r.text:
                         print("\n" + Fore.GREEN + "[✓] XSS FOUND")
@@ -177,7 +180,6 @@ if __name__ == "__main__":
     tty.setcbreak(fd)
 
     try:
-        # ---- Target handling ----
         targets = []
 
         if len(sys.argv) == 2 and sys.argv[1] != "-l":
