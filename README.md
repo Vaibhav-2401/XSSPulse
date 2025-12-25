@@ -30,10 +30,9 @@ git clone https://github.com/Vaibhav-2401/XSSProbe.git
 cd XSSProbe
 pip3 install -r requirements.txt
 
-⚠️ Katana is REQUIRED for XSSProbe to work
+#⚠️ Katana is REQUIRED for XSSProbe to work
 
-XSSProbe relies on Katana (by ProjectDiscovery) to crawl and collect URLs
-before testing them for XSS.
+#XSSProbe relies on Katana (by ProjectDiscovery) to crawl and collect URLs before testing them for XSS.
 
-Install Katana
+#Install Katana
 go install github.com/projectdiscovery/katana/cmd/katana@latest
