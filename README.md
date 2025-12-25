@@ -7,9 +7,8 @@ It uses **Katana (ProjectDiscovery)** for crawling, supports multiple scan modes
 shows real-time payload progress, and provides keyboard hotkeys for faster
 real-world XSS testing.
 
-![Screenshot 2025-12-25 131006](https://github.com/user-attachments/assets/8c6b27b9-a9c9-4cf8-b1ce-49e45d9ba45c)
 
-
+![xpulse](https://github.com/user-attachments/assets/5680cb60-1ff0-4e73-b303-639964a08939)
 
 ---
 
