@@ -41,7 +41,7 @@ Use this mode when testing multiple targets in bulk.
 
 ```bash
 python3 main.py -l domains.txt
-
+````
 
 
 
