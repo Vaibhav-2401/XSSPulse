@@ -36,7 +36,7 @@ Use this mode when you want to test one target at a time.
 python3 main.py example.com
 
 ```
-
+### 🔹 Scan Multiple Domains
 Use this mode when testing multiple targets in bulk.
 
 ```bash
