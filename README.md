@@ -31,7 +31,7 @@ pip3 install -r requirements.txt
 
 XSSProbe requires the following external tools:
 
-- **Katana** (by ProjectDiscovery) – used for crawling URLs
+##**Katana** (by ProjectDiscovery) – used for crawling URLs
 
 ### Install Katana
 
