@@ -6,7 +6,8 @@ bug bounty hunters and penetration testers.
 It uses **Katana (ProjectDiscovery)** for crawling, supports multiple scan modes,
 shows real-time payload progress, and provides keyboard hotkeys for faster
 real-world XSS testing.
-![xss](https://github.com/user-attachments/assets/1bb2491f-47ba-4750-ad7a-158ac80faa7b)
+![Screenshot 2025-12-25 131006](https://github.com/user-attachments/assets/8c6b27b9-a9c9-4cf8-b1ce-49e45d9ba45c)
+
 
 
 ---
