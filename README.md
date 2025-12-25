@@ -1,39 +1,31 @@
 # XSSProbe
 
-🚀 **XSSProbe** is an advanced Cross-Site Scripting (XSS) detection tool designed for
+🚀 **XSSProbe** is an advanced Cross-Site Scripting (XSS) detection tool built for
 bug bounty hunters and penetration testers.
 
-It combines fast crawling, multiple payload modes, real-time progress, and
-keyboard hotkeys for efficient testing.
+It combines **Katana-powered crawling**, multiple **scan modes**, real-time payload
+progress, and **keyboard hotkeys** to make XSS testing faster and more practical
+in real-world scenarios.
 
 ---
 
 ## ✨ Features
 
-- Katana-powered URL crawling
+- Katana-based URL crawling
+- Automatic discovery of parameterized URLs
 - Ultra Fast / Fast / Medium / Full scan modes
-- Real-time payload progress
-- Hotkeys to skip URLs (Ctrl+N / Ctrl+S)
-- Reflected XSS detection
-- Clean CLI output
-- Designed for bug bounty workflows
+- Real-time payload execution counter
+- Hotkeys to skip URLs during scanning
+- Designed for bug bounty & VAPT workflows
+- Clean and readable CLI output
 
 ---
 
-## ⚙️ Installation
+## 📦 Installation
+
+Clone the repository and install Python dependencies:
 
 ```bash
 git clone https://github.com/Vaibhav-2401/XSSProbe.git
 cd XSSProbe
 pip3 install -r requirements.txt
-
-## 🔧 External Dependencies
-
-XSSProbe requires the following external tools:
-
-##**Katana** (by ProjectDiscovery) – used for crawling URLs
-
-### Install Katana
-
-```bash
-go install github.com/projectdiscovery/katana/cmd/katana@latest
