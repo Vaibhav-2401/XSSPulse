@@ -1,21 +1,17 @@
+# XSSPulse
 
-# XSSProbe
-
-🚀 **XSSProbe** is an advanced Cross-Site Scripting (XSS) detection tool built for
+🚀 **XSSPulse** is an advanced Cross-Site Scripting (XSS) detection tool built for
 bug bounty hunters and penetration testers.
 
-It combines **Katana-powered crawling**, multiple **scan modes**, real-time payload
-progress, and **keyboard hotkeys** to make XSS testing faster and more practical
-in real-world scenarios.
-
-![xss](https://github.com/user-attachments/assets/e4e5829d-2891-49ce-971e-d1106c2f995e)
-
+It uses **Katana (ProjectDiscovery)** for crawling, supports multiple scan modes,
+shows real-time payload progress, and provides keyboard hotkeys for faster
+real-world XSS testing.
 
 ---
 
 ## ✨ Features
 
-- Katana-based URL crawling
+- Katana-powered URL crawling
 - Automatic discovery of parameterized URLs
 - Ultra Fast / Fast / Medium / Full scan modes
 - Real-time payload execution counter
@@ -25,43 +21,21 @@ in real-world scenarios.
 
 ---
 
-## ✨ Usage
-
-
-XSSProbe supports scanning a **single domain** or **multiple domains from a file**.
-
----
-
-### 🔹 Scan a Single Domain
-
-Use this mode when you want to test one target at a time.
-
-```bash
-python3 main.py example.com
-
-```
-### 🔹 Scan Multiple Domains
-Use this mode when testing multiple targets in bulk.
-
-```bash
-python3 main.py -l domains.txt
-````
-
-
-
-
 ## 📦 Installation
 
-Clone the repository and install Python dependencies:
-
 ```bash
-git clone https://github.com/Vaibhav-2401/XSSProbe.git
-cd XSSProbe
+git clone https://github.com/Vaibhav-2401/XSSPulse.git
+cd XSSPulse
 pip3 install -r requirements.txt
 
-#⚠️ Katana is REQUIRED for XSSProbe to work
 
-#XSSProbe relies on Katana (by ProjectDiscovery) to crawl and collect URLs before testing them for XSS.
+## 🔧 External Dependencies
 
-#Install Katana
+XSSProbe requires the following external tools:
+
+- **Katana** (by ProjectDiscovery) – used for crawling URLs
+
+### Install Katana
+
+```bash
 go install github.com/projectdiscovery/katana/cmd/katana@latest
