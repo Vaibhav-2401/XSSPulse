@@ -54,4 +54,11 @@ Use this mode when you want to test one target at a time.
 
 ```bash
 python3 main.py example.com
+```
+### 🔹 Scan  Multiple Domains
 
+Use this mode when you want to test multiple targets.
+
+```bash
+python3 main.py -l example.txt
+```
